@@ -10,7 +10,8 @@ git clone https://github.com/ShawonAshraf/bangla-nlp-tutorial.git
 gh repo clone ShawonAshraf/bangla-nlp-tutorial
 
 cd bangla-nlp-tutorial
-# assuming you've already installed anaconda or miniconda
-conda env create -f environment.yml
-conda activate bnnlp
+python -m virtualenv venv
+source activate venv/bin/activate
+# or use python3, depending on your instllation
+pip install -r requirements.txt -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html --extra-index-url https://download.pytorch.org/whl/cpu
 ```
