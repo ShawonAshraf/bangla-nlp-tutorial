@@ -3,8 +3,8 @@
 ![cover image](cover.jpeg)
 
 ## পোস্ট 
-১/  [বাংলায় এনএলপি ০১ - ভূমিকা](https://blog.shawonashraf.com/bnnlp-01-intro)
-২/ [বাংলায় এনএলপি ০২ - এনএলপিতে এত ডিপ লার্নিং কেন লাগে ?](https://blog.shawonashraf.com/bnnlp-02-nlp-dl)
+- [বাংলায় এনএলপি ০১ - ভূমিকা](https://blog.shawonashraf.com/bnnlp-01-intro)
+- [বাংলায় এনএলপি ০২ - এনএলপিতে এত ডিপ লার্নিং কেন লাগে ?](https://blog.shawonashraf.com/bnnlp-02-nlp-dl)
 
 ## env সেটআপ 
 ```bash
