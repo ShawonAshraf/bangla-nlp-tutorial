@@ -1,10 +1,8 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/docker-existing-dockerfile
 {
-	"name": "Existing Dockerfile",
+	"name": "bnnlp-py3-gpu",
 	"build": {
-		// Sets the run context to one level up instead of the .devcontainer folder.
-		"context": "..",
 		// Update the 'dockerFile' property if you aren't using the standard 'Dockerfile' filename.
 		"dockerfile": "../../devcontainer.Dockerfile"
 	},
@@ -13,11 +11,6 @@
 	// "features": {
 	// 	"ghcr.io/devcontainers/features/nvidia-cuda:1": {}
 	// },
-
-	// set to optional so that it doesn't fail on cpu only machines
-	"hostRequirements": {
-		"gpu": "optional"
-	},
 
 	// run args for container to enable gpu passthrough
 	"runArgs": [
