@@ -1,8 +1,15 @@
-FROM continuumio/miniconda3:main
+FROM python:3.12-bookworm
 
-# copy environment.yml to the image
-COPY ./envs/env_linux.yml /tmp/env_linux.yml
+WORKDIR /workspaces
 
+RUN mkdir -p /workspaces/.cache/huggingface
+RUN chmod -R 777 /workspaces/.cache/huggingface
+ENV HF_HOME=/workspaces/.cache/huggingface
+ENV HF_TOKEN=$HF_TOKEN
+ENV WANDB_API_KEY=$WANDB_API_KEY
 
-# create a new environment
-RUN conda env create -f /tmp/env_linux.yml  
+# install poetry
+RUN pip install poetry
+COPY pyproject.toml poetry.lock ./
+RUN poetry config virtualenvs.create false
+RUN poetry install
