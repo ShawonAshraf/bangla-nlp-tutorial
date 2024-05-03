@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "bangla-nlp-tutorial"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+torch = "^2.3.0"
+pandas = "^2.2.2"
+jupyter = "^1.0.0"
+matplotlib = "^3.8.4"
+einops = "^0.8.0"
+transformers = "^4.40.1"
+lightning = "^2.2.4"
+accelerate = "^0.30.0"
+datasets = "^2.19.0"
+peft = "^0.10.0"
+deepspeed = "^0.14.2"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.4.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
