@@ -23,7 +23,7 @@
 
 	// run args for container to enable gpu passthrough
 	"runArgs": [
-		"--gpus", "all", "--network", "host"
+		"--gpus", "all"
 	],
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
