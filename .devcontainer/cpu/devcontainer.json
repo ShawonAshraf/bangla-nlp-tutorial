@@ -6,6 +6,13 @@
 		// Update the 'dockerFile' property if you aren't using the standard 'Dockerfile' filename.
 		"dockerfile": "../../devcontainer.Dockerfile"
 	},
+	"mounts": [
+		"source=${localEnv:HOME}/.cache/huggingface,target=/workspaces/.cache/huggingface,type=bind,consistency=cached"
+	],
+	"containerEnv": {
+		"HF_TOKEN": "${HF_TOKEN}",
+		"WANDB_API_KEY": "${WANDB_API_KEY}"
+	},
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
@@ -24,7 +31,8 @@
 			"extensions": [
 				"ms-python.python",
 				"ms-toolsai.jupyter",
-				"tensorBoard.tensorboard"
+				"tensorBoard.tensorboard",
+				"charliermarsh.ruff"
 			]
 		}
 	}

@@ -7,6 +7,15 @@
 		"dockerfile": "../../devcontainer.Dockerfile"
 	},
 
+	"mounts": [
+		"source=${localEnv:HOME}/.cache/huggingface,target=/workspaces/.cache/huggingface,type=bind,consistency=cached"
+	],
+	"containerEnv": {
+		"HF_TOKEN": "${HF_TOKEN}",
+		"WANDB_API_KEY": "${WANDB_API_KEY}"
+	},
+
+
 	// for nvidia-docker and gpu passthrough
 	// "features": {
 	// 	"ghcr.io/devcontainers/features/nvidia-cuda:1": {}
@@ -32,7 +41,8 @@
 			"extensions": [
 				"ms-python.python",
 				"ms-toolsai.jupyter",
-				"tensorBoard.tensorboard"
+				"tensorBoard.tensorboard",
+				"charliermarsh.ruff"
 			]
 		}
 	}
