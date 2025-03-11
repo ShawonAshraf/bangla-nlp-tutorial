@@ -8,8 +8,8 @@ ENV HF_HOME=/workspaces/.cache/huggingface
 ENV HF_TOKEN=$HF_TOKEN
 ENV WANDB_API_KEY=$WANDB_API_KEY
 
-# install poetry
-RUN pip install poetry
-COPY pyproject.toml poetry.lock ./
-RUN poetry config virtualenvs.create false
-RUN poetry install
+
+# env
+RUN pip install uv
+COPY pyproject.toml uv.lock ./
+RUN uv pip install --system .
