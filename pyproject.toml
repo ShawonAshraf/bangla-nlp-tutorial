@@ -17,6 +17,8 @@ dependencies = [
     "peft>=0.14.0",
     "tensorboard>=2.19.0",
     "torch>=2.6.0",
+    "torchaudio>=2.6.0",
+    "torchvision>=0.21.0",
     "transformers>=4.49.0",
     "wandb>=0.19.8",
 ]
